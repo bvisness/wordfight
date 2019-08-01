@@ -89,11 +89,17 @@ function randomLetter() {
 	rotateCell(cell);
 }
 
-button.addEventListener('click', () => {
+function buttonPressed() {
 	if (!gameActive) {
 		initGame();
 	} else {
 		nextTurn();
 		randomLetter();
 	}
+}
+
+button.addEventListener('click', buttonPressed);
+button.addEventListener('touchstart', e => {
+	e.preventDefault();
+	buttonPressed();
 });
