@@ -14,6 +14,10 @@ body {
 	right:  10px;
 	top:    10px;
 	bottom: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .button {
@@ -37,6 +41,7 @@ body {
 }
 
 .ui {
+	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -99,13 +104,15 @@ body {
 	color: blue;
 }
 
-.board-container {
-	position: absolute;
-	bottom: 0;
-
+.board-container-container {
 	width: 100%;
-	padding-top: 100%;
+	max-width: 60vh;
 	font-size: 0;
+}
+
+.board-container {
+	padding-top: 100%;
+	position: relative;
 }
 
 .board {
